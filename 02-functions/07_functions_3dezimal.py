@@ -15,7 +15,7 @@ def cidr_zu_dezimal(cidr_suffix):
     
     return '.'.join(dezimal_blöcke)
 
-# Selbes Spiel wie bei der "ersten" Aufgabe. zahl muss im Rahmen bleiben.
+# Selbes Spiel wie bei der "ersten" Aufgabe. Zahl muss im Rahmen bleiben.
 cidr_suffix = 24
 dezimal_maske = cidr_zu_dezimal(cidr_suffix)
 print(f"CIDR-Suffix: {cidr_suffix} -> Dezimal: {dezimal_maske}")
