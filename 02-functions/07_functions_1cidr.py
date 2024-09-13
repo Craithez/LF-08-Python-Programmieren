@@ -4,10 +4,10 @@ def anzahl_hosts(cidr_suffix):
     
     # Anzahl der Host-Bits ist 32 
     host_bits = 32 - cidr_suffix
-    # Berechnung der Anzahl der möglichen Hosts
+    # Anzahl der möglichen Hosts
     anzahl_hosts = (2 ** host_bits) - 2  # Abzug der Netzwerk- und Broadcast-Adresse
     
     return anzahl_hosts
 
-# Beispielaufruf
-print(anzahl_hosts(28))  
+# Einfach Zahl ändern. Max sollte bekannt sein, alles über 31 produziert "falsche" Ergebnisse.
+print(anzahl_hosts(29))  
