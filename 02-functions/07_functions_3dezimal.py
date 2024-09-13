@@ -10,6 +10,7 @@ def cidr_zu_dezimal(cidr_suffix):
     # int(binär_maske[i:i+8], 2) konvertiert jeden 8-Bit-Block von seiner binären Form in eine Dezimalzahl. 
     # Die int-Funktion mit Basis 2 (2) wandelt den binären String in eine Ganzzahl um.
     # str() konvertiert uns die Ganzzahl als String.
+    # range -> Start bei 0, Ende bei 32, Schritte 8.
     dezimal_blöcke = [str(int(binär_maske[i:i+8], 2)) for i in range(0, 32, 8)]
     
     return '.'.join(dezimal_blöcke)
