@@ -1,14 +1,4 @@
 def addiere_listen(liste1, liste2):
-    """
-    Die Funktion addiert die ausgewählten Elemente von zwei Listen mit jeweils drei Zahlen.
-    
-    Parameter:
-    Liste 1 - Zahlen
-    Liste 2 - Zahlen
-    
-    Rückgabewert:
-    ergebnis: Eine Liste, die die Summen der entsprechenden Elemente von liste1 und liste2 enthält.
-    """
     if len(liste1) != 3 or len(liste2) != 3:
         raise ValueError("Beide Listen müssen genau drei Elemente enthalten.")
     

@@ -14,9 +14,9 @@ def aktuelles_datum_und_zeit():
 aktuelles_datum_und_zeit()
 
 
-# Aufgabe: Friday, 13.09.2024 – 13:27:15
+# Ausgabe: Friday, 13.09.2024 – 13:27:15
 
-# Weil ich mich selber hasse hier für deutsche Ausgabe:
+# Weil ich mich selber hasse hier die deutsche Ausgabe:
 """ from datetime import datetime
 
 def aktuelles_datum_und_zeit():
@@ -50,6 +50,4 @@ def aktuelles_datum_und_zeit():
     
     # Ausgabe des formatierten Datums und Zeitstempels
     print(formatiert) """
-
-# Funktion aufrufen
 # aktuelles_datum_und_zeit()
