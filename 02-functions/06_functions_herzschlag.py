@@ -8,13 +8,12 @@ def berechne_maximalpuls(alter, gewicht, geschlecht):
     
     return maximalpuls
 
-# Beispielwerte
 alter = 30       
 gewicht = 70
 geschlecht = "weiblich"  
 
-# Funktion aufrufen und Ergebnis berechnen
+# Aufrufen + berechnen
 maximalpuls = berechne_maximalpuls(alter, gewicht, geschlecht)
 
-# Ergebnis ausgeben
+# Ausgeben
 print(f"Der Maximalpuls für eine {alter}-jährige {geschlecht} mit {gewicht} kg beträgt {maximalpuls:.2f} Schläge pro Minute.")

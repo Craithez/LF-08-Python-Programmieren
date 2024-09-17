@@ -1,7 +1,7 @@
 def ip_und_maske_in_binär(ip_adresse, subnetzmaske):
     def dezimal_zu_binär(adresse):
         return '.'.join(f"{int(octet):08b}" for octet in adresse.split('.')) 
-    # Selbe Funktion wie in LF-05 bei der IPv4 zu IPv6 Aufgabe "https://github.com/Craithez/LF-05-Pyhton-Programmieren/blob/main/Basics/IPv4toIPv6.py"
+    # fast die selbe Funktion wie in LF-05 bei der IPv4 zu IPv6 Aufgabe "https://github.com/Craithez/LF-05-Pyhton-Programmieren/blob/main/Basics/IPv4toIPv6.py"
 
     ip_binär = dezimal_zu_binär(ip_adresse)
     maske_binär = dezimal_zu_binär(subnetzmaske)
