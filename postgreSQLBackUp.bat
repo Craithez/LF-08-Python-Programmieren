@@ -4,8 +4,10 @@
 @echo Backup Database  %PG_PATH%%PG_FILENAME%
 @echo off
 SET PG_BIN="C:\Program Files\PostgreSQL\16\bin\pg_dump.exe"
+:: Alternativ "\bin\pg_dump.exe" in einem extra Ordner.
 SET PG_HOST=localhost
 SET PG_PORT=5432
+:: Es muss ein neuer Benutzer angelegt werden, root funktioniert nicht.
 SET PG_DATABASE=DATENBANKNAME
 SET PG_USER=BENUTZER
 SET PG_PASSWORD=PASSWORT
