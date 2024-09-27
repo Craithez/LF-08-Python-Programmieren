@@ -4,7 +4,7 @@ def aktuelles_datum_und_zeit():
     jetzt = datetime.now()
     
     # Formatierung
-    formatiert = jetzt.strftime("%A, %d.%m.%Y %H:%M:%S")
+    formatiert = jetzt.strftime("%A, %d.%m.%Y – %H:%M:%S")
     
     # Ausgabe
     print(formatiert)
