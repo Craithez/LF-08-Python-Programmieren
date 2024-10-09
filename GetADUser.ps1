@@ -1,0 +1,1 @@
+get-aduser -filter * -Properties name,memberof |select name, @{n=’MemberOf’; e= { ( $_.memberof | % { (Get-ADObject $_).Name }) -join “,” }} | export-csv c:\users.csv -nti
