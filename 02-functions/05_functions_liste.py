@@ -12,6 +12,7 @@ resultat = addiere_listen(liste1, liste2)
 print(resultat)  
 
 
+
 # Lösung Fabian
 # def liste3(liste1,liste2):
 #   ergebnis = []
