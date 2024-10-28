@@ -1,6 +1,6 @@
 def anzahl_hosts(cidr_suffix):
-    if not (0 <= cidr_suffix <= 32):
-        raise ValueError("CIDR-Suffix muss zwischen 0 und 32 liegen.")
+ #   if not (0 <= cidr_suffix <= 32):
+ #       raise ValueError("CIDR-Suffix muss zwischen 0 und 32 liegen.")
 
     # Host-Bits 32
     host_bits = 32 - cidr_suffix
