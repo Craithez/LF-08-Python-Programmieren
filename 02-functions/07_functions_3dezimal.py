@@ -1,7 +1,4 @@
-def cidr_zu_dezimal(cidr_suffix):
-    if not (0 <= cidr_suffix <= 32):
-        raise ValueError("CIDR-Suffix muss zwischen 0 und 32 liegen.")
-    
+def cidr_zu_dezimal(cidr_suffix):   
     # Netzmaske in binär Form, kenne keine bessere Methode. Also erst CIDR zu Binär, anschließend in Dezimal.
     # zfill ist straight von w3schools geklaut.
     # binär_maske 0:8, 8:16, 16:24 und 24:32. 
@@ -14,6 +11,6 @@ def cidr_zu_dezimal(cidr_suffix):
     return '.'.join(dezimal_blöcke)
 
 # Selbes Spiel wie bei der "ersten" Aufgabe. Zahl muss im Rahmen bleiben.
-cidr_suffix = 24
+cidr_suffix = 28
 dezimal_maske = cidr_zu_dezimal(cidr_suffix)
 print(f"CIDR-Suffix: {cidr_suffix} -> Dezimal: {dezimal_maske}")
