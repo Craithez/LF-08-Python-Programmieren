@@ -4,7 +4,6 @@ def dezimal_zu_binär(ip_adresse):
 def ip_und_maske_in_binär(ip_adresse, subnetzmaske):
     ip_binär = dezimal_zu_binär(ip_adresse)
     maske_binär = dezimal_zu_binär(subnetzmaske)
-    
     return ip_binär, maske_binär
 
 ip_adresse = "10.10.89.122"
