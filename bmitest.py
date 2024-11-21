@@ -2,7 +2,6 @@ def bmi_berechnen(gewicht, groesse):
     # Berechnung des BMI
     bmi = gewicht / (groesse ** 2)
     # Ausgabe des BMI
-    print(f"Dein BMI ist: {bmi:.2f}")
     return bmi
 
 # Eingabewerte
