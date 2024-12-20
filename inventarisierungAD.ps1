@@ -10,7 +10,7 @@ Export-CSV -Path "C:\Test\ADcomputerslist.csv" -NoTypeInformation -Encoding UTF8
 $ComputerListe = Get-ADComputer -filter * | Select-Object -ExpandProperty Name
 foreach ($Computer in $ComputerListe) {
     if (!(Test-Connection -Cn $Computer -BufferSize 16 -Count 1 -ea 0 -quiet)) {
-        Write-Host "Kann $Computer nicht erreichen, offline" -f rot
+        Write-Host "Kann $Computer nicht erreichen, offline" -f red   #Deutsches Windows kennt auch kein rot :P
     } else {
         $Ausgabetabelle = @()
         try {
@@ -38,7 +38,7 @@ foreach ($Computer in $ComputerListe) {
                 }
             }, Benutzername -ErrorAction Stop
 
-            # Abfrage der Monitor-Seriennummern
+            # Abfrage der Monitor-Seriennummern - Klappt nur bedingt.
             $Monitore = Get-WmiObject Win32_DesktopMonitor -ComputerName $Computer -ErrorAction Stop
             $MonitorSeriennummern = $Monitore | ForEach-Object { $_.SerialNumber }
 
@@ -70,7 +70,6 @@ foreach ($Computer in $ComputerListe) {
         $Ausgabetabelle | select Computername, Aktiviert, Beschreibung, IpAdresse, Ou, Typ, Seriennummer, Hersteller, Modell, RAM, ProzessorName, AnzahlKerne, AnzahlLogischeProzessoren, Adressbreite, Betriebssystem, AngemeldeterBenutzer, LetztesAnmeldedatum, MonitorSeriennummern | export-csv -Append c:\Test\NeuesADInventar.csv -nti
     }
 }
-
 
 #Notiz 
 #Get-Module -ListAvailable ActiveDirectory
