@@ -1,0 +1,1 @@
+get-wmiobject wmimonitorid -namespace root\wmi|foreach-object{($_.SerialnumberID|foreach-object{[char]$_}) -join „“}
