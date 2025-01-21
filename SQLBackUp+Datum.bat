@@ -17,7 +17,7 @@ if %month-num%==12 set mo-name=12 - Dezember
 
 :: Pfade setzen und die Datei kopieren
 set source="C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\MySirius.bak"
-:: set destination="X:\Ziel"
-set destination="C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\%mo-name%\MySirius_Sicherung_%date%.bak"
+:: set ziel="X:\Zielordner"
+set ziel="C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\%mo-name%\MySirius_Sicherung_%date%.bak"
 
-@copy %source% %destination%
+@copy %source% %ziel%
